@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import api from '../services/api';
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthContext';
+import { useEffect } from 'react';
+
+useEffect(() => {
+  if (!usuario) {
+    navigation.replace('Login');
+  }
+}, []);
+
 
 export default function HomeScreen() {
   const [usuarios, setUsuarios] = useState([]);

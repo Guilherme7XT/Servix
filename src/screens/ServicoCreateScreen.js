@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import api from '../services/api';
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthContext';
+
+const { usuario } = useContext(AuthContext);
+
+await api.post('/servicos', {
+  titulo,
+  descricao,
+  preco: parseFloat(preco),
+  prestadorId: usuario.uid, // usando ID real do Firebase
+});
+
 
 export default function ServicoCreateScreen({ navigation }) {
   const [titulo, setTitulo] = useState('');
