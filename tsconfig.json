@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "react",
+    "jsxImportSource": "react",
     "moduleResolution": "node",
     "allowJs": true,
     "noEmit": true,
@@ -13,5 +14,5 @@
       "@/": [""]
     }
   },
-  "include":["src"]
+  "include": ["src"]
 }
