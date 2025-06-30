@@ -7,6 +7,6 @@
     "typescript": "^5.8.3"
   },
   "scripts": {
-    "start": "node servix-web/src/index.js"
+  "start": "node api_servix/index.js"
   }
 }
