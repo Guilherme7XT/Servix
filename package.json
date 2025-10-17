@@ -1,16 +1,28 @@
 {
+  "name": "servix",
+  "version": "1.0.0",
+  "description": "Servix - Sistema de agendamento de serviços",
+  "main": "api_servix/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node api_servix/server.js",
+    "dev": "nodemon api_servix/server.js",
+    "web": "cd servix-web && npm start",
+    "mobile": "cd src && npm start"
+  },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
+    "express": "^4.18.2",
     "firebase": "^11.9.1",
     "pg": "^8.16.3",
     "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^5.0.2",
+    "nodemon": "^3.1.10",
     "typescript": "^5.8.3"
   },
-  "scripts": {
-    "start": "node api_servix/server.js"
-  }
+  "keywords": ["servix", "agendamento", "servicos", "api"],
+  "author": "Servix Team",
+  "license": "MIT"
 }

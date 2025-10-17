@@ -1,19 +1,10 @@
-const express = require('express');
-const app = express();
-const cors = require('cors');
-const routes = require('./routes');
-const db = require('./models');
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './app';
 
-app.use(cors());
-app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('API da Servix Online 🚀');
-});
-
-app.use('/api', routes);
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
